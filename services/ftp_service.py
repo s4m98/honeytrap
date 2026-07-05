@@ -125,15 +125,15 @@ class FTPService:
         perms = self.get_user_permissions(username)
         
         listing = ""
-        listing += "drwxr-xr-x 2 ftp ftp 4096 Jan 1 2020 pub\n"
-        listing += "-rw-r--r-- 1 ftp ftp 1024 Jan 1 2020 README.txt\n"
-        listing += "-rw-r--r-- 1 ftp ftp 2048 Jan 1 2020 passwords.txt\n"
-        listing += "-rw-r--r-- 1 ftp ftp 512 Jan 1 2020 config.ini\n"
-        listing += "-rw-r--r-- 1 ftp ftp 128 Jan 1 2020 notice.txt\n"
+        listing += "drwxr-xr-x 2 ftp ftp 4096 Jan 1 2026 pub\n"
+        listing += "-rw-r--r-- 1 ftp ftp 1024 Jan 1 2026 README.txt\n"
+        listing += "-rw-r--r-- 1 ftp ftp 2048 Jan 1 2026 passwords.txt\n"
+        listing += "-rw-r--r-- 1 ftp ftp 512 Jan 1 2026 config.ini\n"
+        listing += "-rw-r--r-- 1 ftp ftp 128 Jan 1 2026 notice.txt\n"
         
         if perms == "full":
-            listing += "-rw-r--r-- 1 ftp ftp 256 Jan 1 2020 secret.txt\n"
-            listing += "drwxr-xr-x 2 ftp ftp 4096 Jan 1 2020 admin_only\n"
+            listing += "-rw-r--r-- 1 ftp ftp 256 Jan 1 2026 secret.txt\n"
+            listing += "drwxr-xr-x 2 ftp ftp 4096 Jan 1 2026 admin_only\n"
         
         return listing
     
