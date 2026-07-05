@@ -38,6 +38,9 @@ A powerful, modular honeypot system for Linux that captures attacker credentials
 - 💾 **Database Storage**: SQLite database for all captured data
 - 📊 **Statistics**: Connection counts, unique IPs, etc.
 
+<figure><img src="../ss/1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../ss/2.png" alt=""><figcaption></figcaption></figure>
+
 ## 🏗️ Architecture
 
 ```
@@ -97,13 +100,13 @@ mkdir -p web_root ftp_root logs
 ```
 
 ## Install Dependencies
-bash
-# Install required packages
+
+## Install required packages
 ```
 pip3 install -r requirements.txt --break-system-packages
 ```
 
-# Or manually:
+## Or manually:
 ```
 pip3 install pynput pyftpdlib requests --break-system-packages
 ```
