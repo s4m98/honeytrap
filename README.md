@@ -39,7 +39,7 @@ A powerful, modular honeypot system for Linux that captures attacker credentials
 - 📊 **Statistics**: Connection counts, unique IPs, etc.
 
 ## 🏗️ Architecture
-
+```
 honeytrap/
 ├── honeytrap.py              # Main orchestrator
 ├── config.py                # Configuration settings
@@ -69,7 +69,7 @@ honeytrap/
 ├── logs/                    # Service logs
 ├── captured_credentials.txt
 └── honeypot.db
-
+```
 
 ### System Requirements
 
