@@ -1,4 +1,4 @@
-# 🐝 HoneyTrap - Advanced Multi-Service Honeypot System
+# HoneyTrap 🐝 - Advanced Multi-Service Honeypot System
 
 A powerful, modular honeypot system for Linux that captures attacker credentials, tracks geolocation, and logs activities across multiple services including HTTP, FTP, SSH, Telnet, and MySQL.
 
@@ -11,9 +11,6 @@ A powerful, modular honeypot system for Linux that captures attacker credentials
 - [Services](#-services)
 - [Configuration](#-configuration)
 - [Logging & Data Capture](#-logging--data-capture)
-- [Testing](#-testing)
-- [Customization](#-customization)
-- [Troubleshooting](#-troubleshooting)
 - [Security Considerations](#-security-considerations)
 - [Project Structure](#-project-structure)
 - [License](#-license)
@@ -37,6 +34,7 @@ A powerful, modular honeypot system for Linux that captures attacker credentials
 - 🕵️ **Session Tracking**: Tracks user sessions and activities
 - 💾 **Database Storage**: SQLite database for all captured data
 - 📊 **Statistics**: Connection counts, unique IPs, etc.
+
 
 <figure><img src="/ss/1.png" alt=""><figcaption></figcaption></figure>
 <figure><img src="/ss/2.png" alt=""><figcaption></figcaption></figure>
@@ -97,6 +95,7 @@ geoip2>=4.6.0        # Optional for MaxMind GeoIP
 git clone https://github.com/s4m98/honeytrap.git
 cd honeytrap
 mkdir -p web_root ftp_root logs
+chmod +x honeytrap.py
 ```
 
 ## Install Dependencies
@@ -113,25 +112,49 @@ pip3 install pynput pyftpdlib requests --break-system-packages
 
 ## 🎯 Quick Start
 
-Starting the Honeypot
-bash
+Run with sudo command
 ```
-sudo python3 honeypot.py
+sudo python3 honeytrap.py
 ```
 
-# Select option 1 from the menu
-# Then type 'stop' to shutdown
+
+## Then type 'stop' to shutdown
 
 
 ## Default Users:
 
-text
-admin / password123!
-user / password
-root / toor
-test / test123
-anonymous / any password
+```txt
+FTP:
+     Valid Credentials:
+       • admin / password123! [full]
+       • user / password [read]
+       • root / toor [full]
+       • test / test123 [read]
+       • anonymous / (empty) [read]
+       • ftp / (empty) [read]
 
+HTTP:
+     Valid Credentials:
+     • admin / password123!
+
+MYSQL:
+      Valid Credentials:
+      • admin : admin@123
+      • root : myr00t
+```
+
+## 📊 Logging & Data Capture
+Log Files Structure
+
+```text
+logs/
+├── http_logs.txt      # HTTP login attempts & requests
+├── ftp_logs.txt       # FTP commands & login attempts
+├── ssh_logs.txt       # SSH connection attempts
+├── telnet_logs.txt    # Telnet login attempts
+├── mysql_logs.txt     # MySQL connection attempts
+└── honeypot.log       # Application events and errors
+```
 
 ## 📝 License
 This project is for educational and security research purposes only.
@@ -143,6 +166,4 @@ DISCLAIMER:
 * The authors are not responsible for any misuse or damage caused by this tool.
 
 * Only deploy on systems you own or have explicit permission to test.
-
-
 
