@@ -21,26 +21,24 @@ A powerful, modular honeypot system for Linux that captures attacker credentials
 ## 🌟 Features
 
 ### Core Features
-- **Multi-Service Support**: HTTP, FTP, SSH, Telnet, MySQL
-- **Complete Credential Capture**: Captures full usernames and passwords (not individual characters)
-- **GeoLocation Tracking**: Tracks attacker locations using IP-API.com or MaxMind GeoIP
-- **Device Fingerprinting**: Extracts device type, OS, browser from User-Agent
-- **Modular Architecture**: Easy to add/modify services
-- **Database Storage**: SQLite database for all captured data
-- **Real-time Monitoring**: Live statistics and log viewing
-- **Custom Web Pages**: Create realistic fake login pages
+- ✅ **Multi-Service Support**: HTTP, FTP, SSH, Telnet, MySQL
+- ✅ **Complete Credential Capture**: Captures full usernames and passwords
+- ✅ **GeoLocation Tracking**: Tracks attacker locations using IP-API.com
+- ✅ **Device Fingerprinting**: Extracts OS, browser, and device type
+- ✅ **Modular Architecture**: Easy to add/modify services
+- ✅ **Real-time Monitoring**: Live statistics and log viewing
+- ✅ **Custom Web Pages**: Create realistic fake login pages
+- ✅ **Fake File System**: Decoy files to attract attackers
 
 ### Security Features
-- **Complete Credential Logging**: Captures full usernames/passwords
-- **Location Intelligence**: Country, city, ISP, coordinates
-- **Command Logging**: Logs all FTP/HTTP commands
-- **File Access Tracking**: Monitors file downloads/uploads
-- **Fake File System**: Decoy files to attract attackers
-- **Session Tracking**: Tracks user sessions and activities
+- 🔒 **Complete Logging**: All activities logged to separate files
+- 🌍 **Location Intelligence**: Country, city, ISP, coordinates
+- 📁 **File Access Tracking**: Monitors file downloads/uploads
+- 🕵️ **Session Tracking**: Tracks user sessions and activities
+- 💾 **Database Storage**: SQLite database for all captured data
+- 📊 **Statistics**: Connection counts, unique IPs, etc.
 
 ## 🏗️ Architecture
-
-
 
 honeytrap/
 ├── honeytrap.py              # Main orchestrator
@@ -73,26 +71,30 @@ honeytrap/
 └── honeypot.db
 
 
-## 📦 Requirements
+### System Requirements
 
 - **Python 3.7+**
 - **Linux OS** (Ubuntu/Debian recommended)
 - **Root/sudo privileges** (for ports below 1024)
 
 ### Python Dependencies
-pynput>=1.7.6 # For keylogging
-pyftpdlib>=1.5.6 # For FTP service
-requests>=2.28.0 # For GeoIP API calls
-geoip2>=4.6.0 # Optional for MaxMind GeoIP
+
+```txt
+pynput>=1.7.6        # For keylogging
+pyftpdlib>=1.5.6     # For FTP service
+requests>=2.28.0     # For GeoIP API calls
+geoip2>=4.6.0        # Optional for MaxMind GeoIP
+```
 
 ## 🚀 Installation
 
 ### 1. Clone or Download
 ```bash
-git clone https://github.com/yourusername/honeytrap.git
+git clone https://github.com/s4m98/honeytrap.git
 cd honeytrap
 mkdir -p web_root ftp_root logs
 ```
+
 ## Install Dependencies
 bash
 # Install required packages
