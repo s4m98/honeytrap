@@ -1,0 +1,142 @@
+# 🐝 HoneyTrap - Advanced Multi-Service Honeypot System
+
+A powerful, modular honeypot system for Linux that captures attacker credentials, tracks geolocation, and logs activities across multiple services including HTTP, FTP, SSH, Telnet, and MySQL.
+
+## 📋 Table of Contents
+- [Features](#-features)
+- [Architecture](#-architecture)
+- [Requirements](#-requirements)
+- [Installation](#-installation)
+- [Quick Start](#-quick-start)
+- [Services](#-services)
+- [Configuration](#-configuration)
+- [Logging & Data Capture](#-logging--data-capture)
+- [Testing](#-testing)
+- [Customization](#-customization)
+- [Troubleshooting](#-troubleshooting)
+- [Security Considerations](#-security-considerations)
+- [Project Structure](#-project-structure)
+- [License](#-license)
+
+## 🌟 Features
+
+### Core Features
+- **Multi-Service Support**: HTTP, FTP, SSH, Telnet, MySQL
+- **Complete Credential Capture**: Captures full usernames and passwords (not individual characters)
+- **GeoLocation Tracking**: Tracks attacker locations using IP-API.com or MaxMind GeoIP
+- **Device Fingerprinting**: Extracts device type, OS, browser from User-Agent
+- **Modular Architecture**: Easy to add/modify services
+- **Database Storage**: SQLite database for all captured data
+- **Real-time Monitoring**: Live statistics and log viewing
+- **Custom Web Pages**: Create realistic fake login pages
+
+### Security Features
+- **Complete Credential Logging**: Captures full usernames/passwords
+- **Location Intelligence**: Country, city, ISP, coordinates
+- **Command Logging**: Logs all FTP/HTTP commands
+- **File Access Tracking**: Monitors file downloads/uploads
+- **Fake File System**: Decoy files to attract attackers
+- **Session Tracking**: Tracks user sessions and activities
+
+## 🏗️ Architecture
+
+
+
+honeytrap/
+├── honeytrap.py              # Main orchestrator
+├── config.py                # Configuration settings
+├── services/
+│   ├── __init__.py
+│   ├── ftp_service.py       # FTP honeypot with folder support
+│   ├── http_service.py      # HTTP honeypot with web_root support
+│   ├── ssh_service.py       # SSH honeypot
+│   ├── telnet_service.py    # Telnet honeypot
+│   ├── mysql_service.py     # MySQL honeypot
+│   └── postgresql_service.py # PostgreSQL honeypot
+├── core/
+│   ├── __init__.py
+│   ├── keylogger.py         # Keylogging functionality
+│   ├── database.py          # Database manager
+│   ├── geoip.py             # GeoLocation handler
+│   └── utils.py             # Utility functions
+├── web_root/                # HTTP web files directory
+│   ├── index.html
+│   ├── login.html
+│   └── css/
+│       └── style.css
+├── ftp_root/                # FTP files directory
+│   ├── readme.txt
+│   ├── passwords.txt
+│   └── config.ini
+├── logs/                    # Service logs
+├── captured_credentials.txt
+└── honeypot.db
+
+
+## 📦 Requirements
+
+- **Python 3.7+**
+- **Linux OS** (Ubuntu/Debian recommended)
+- **Root/sudo privileges** (for ports below 1024)
+
+### Python Dependencies
+pynput>=1.7.6 # For keylogging
+pyftpdlib>=1.5.6 # For FTP service
+requests>=2.28.0 # For GeoIP API calls
+geoip2>=4.6.0 # Optional for MaxMind GeoIP
+
+## 🚀 Installation
+
+### 1. Clone or Download
+```bash
+git clone https://github.com/yourusername/honeytrap.git
+cd honeytrap
+mkdir -p web_root ftp_root logs
+```
+## Install Dependencies
+bash
+# Install required packages
+```
+pip3 install -r requirements.txt --break-system-packages
+```
+
+# Or manually:
+```
+pip3 install pynput pyftpdlib requests --break-system-packages
+```
+
+## 🎯 Quick Start
+
+Starting the Honeypot
+bash
+```
+sudo python3 honeypot.py
+```
+
+# Select option 1 from the menu
+# Then type 'stop' to shutdown
+
+
+## Default Users:
+
+text
+admin / password123!
+user / password
+root / toor
+test / test123
+anonymous / any password
+
+
+## 📝 License
+This project is for educational and security research purposes only.
+
+DISCLAIMER:
+
+* Users are responsible for complying with all applicable laws and regulations.
+
+* The authors are not responsible for any misuse or damage caused by this tool.
+
+* Only deploy on systems you own or have explicit permission to test.
+
+
+
