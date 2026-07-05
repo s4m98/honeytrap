@@ -38,8 +38,8 @@ A powerful, modular honeypot system for Linux that captures attacker credentials
 - 💾 **Database Storage**: SQLite database for all captured data
 - 📊 **Statistics**: Connection counts, unique IPs, etc.
 
-<figure><img src="../ss/1.png" alt=""><figcaption></figcaption></figure>
-<figure><img src="../ss/2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/ss/1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/ss/2.png" alt=""><figcaption></figcaption></figure>
 
 ## 🏗️ Architecture
 
