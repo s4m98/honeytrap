@@ -38,6 +38,9 @@ A powerful, modular honeypot system for Linux that captures attacker credentials
 
 <figure><img src="/ss/1.png" alt=""><figcaption></figcaption></figure>
 <figure><img src="/ss/2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/ss/3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/ss/4.png" alt=""><figcaption></figcaption></figure>
+
 
 ## 🏗️ Architecture
 
