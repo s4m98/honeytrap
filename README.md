@@ -9,9 +9,7 @@ A powerful, modular honeypot system for Linux that captures attacker credentials
 - [Installation](#-installation)
 - [Quick Start](#-quick-start)
 - [Services](#-services)
-- [Configuration](#-configuration)
 - [Logging & Data Capture](#-logging--data-capture)
-- [Security Considerations](#-security-considerations)
 - [Project Structure](#-project-structure)
 - [License](#-license)
 
